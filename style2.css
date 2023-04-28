@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.ff-header {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.ff-body {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Violet);
+
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.head_img-imgatras-desktop {
+    display: none;
+}
+
+.head_img-imgatras {
+    width: 100%;
+    position: absolute;
+}
+
+.head .head_img-page {
+    z-index: 1000;
+    padding: 1.7rem;
+}
+.img-conte{
+    display: none;
+}
+
+
+.head_img-logo {
+    z-index: 1000;
+    width: 50%;
+    padding: 1rem;
+}
+.head_fondo{
+    position: absolute;
+    width: 100%;
+}
+.container_fondo{
+    display: none;
+}
+.body {
+    color: var(--white);
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.body p:nth-child(1) {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.body p:nth-child(2) {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+}
+
+button {
+    padding: 0.7rem;
+    border-radius: 1.2rem;
+    width: 170px;
+    height: 30px;
+    font-size: 0.7rem;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--white);
+    border: none;
+    color: var(--Violet);
+    box-shadow: 1px 1px 7px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, top 0.5s;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+button:hover {
+    font-weight: bold;
+    transform: translateY(-0.2rem);
+}
+
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+svg {
+    fill: white;
+    width: 20px;
+    transition: transform 0.1s ease-in-out
+}
+
+svg:hover {
+    transform: translateY(-0.2rem);
+    cursor: pointer;
+
+}
+
+@media (min-width:600px) {
+    .img-conte{
+        width: 100%;
+        display: block;
+        position: absolute;
+        min-height: 100vh;
+    }
+
+    .container {
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem ;
+        height: 100vh;
+        background-color: none;
+    }
+        .container .container_fondo{
+            position: absolute;
+            
+        }
+        .head_fondo {
+            display: none;
+        }
+            .head .head_img-page {
+                                    width: 300px;
+                                    margin-top: 1rem;
+                                }
+
+    .head{
+        width: 50%;
+        height: 100%;
+        gap: 7rem;
+    }
+    .head .head_img-page{
+        padding: 0;
+    }
+
+    .body{
+        width: 50%;
+        height: 100%;
+        gap: 0;
+        text-align: start;
+    }
+    .body p:nth-child(1){
+        margin-top: 11rem;
+    }
+
+    .body p:nth-child(2){
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    .body button {
+        width: 50%;
+        margin: 0 0;
+    }
+    .body .redes-sociales{
+        margin-top: 8rem;
+        justify-content: end;
+    }
+
+}
+
+@media (min-width:800px){
+    .container{
+        max-width: 100%;
+    }
+        .head {
+        width: 50%;
+        height: 100%;
+        gap: 7rem;
+        }
+        .head .head_img-logo{
+            width: 200px;
+        }
+        .head .head_img-page {
+            width: 400px;
+        }
+}
+
+@media (min-width:900px){
+        .head .head_img-page {
+            width:400px;
+            margin-left: 2rem;
+            }
+
+}
+
+@media (min-width:1200px) {
+    .head .head_img-page {
+        width: 600px;
+        margin-left: 1.1rem;
+        margin-top: -2rem;
+    }
+}
+
+
